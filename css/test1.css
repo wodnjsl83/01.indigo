@@ -1,0 +1,277 @@
+body {
+  font-family: "맑은 고딕", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+h2 {
+  font-size: 30px;
+  color: rgb(25, 25, 139);
+}
+.small {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  padding: 15px;
+}
+#visual img {
+  width: 100%;
+}
+/*we are 시작*/
+.text {
+  display: flex;
+  justify-content: space-between;
+}
+#weare {
+  padding: 40px 0;
+}
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.text h2 {
+  width: 40%;
+}
+.text p {
+  padding-left: 40px;
+  width: 60%;
+}
+.text p::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 20px;
+  color: rgb(201, 215, 228);
+}
+#menu ul {
+  display: flex;
+  padding: 60px 0;
+  text-align: center;
+  align-items: center;
+}
+#menu ul li {
+  width: 25%;
+}
+#menu ul li h3 {
+  padding-top: 10px;
+}
+#menu ul li img {
+  height: 60px;
+}
+/*weare끝*/
+/*work시작*/
+#work h2 {
+  font-weight: bold;
+}
+#work ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+#work ul li {
+  width: 25%;
+  position: relative;
+}
+#work ul li img {
+  width: 100%;
+}
+/*work hover시작*/
+#work li .bg {
+  background-color: rgb(173, 173, 247);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+#work li:hover .bg {
+  opacity: 0.5;
+}
+#work li .whitetext {
+  position: absolute;
+  top: -100px;
+  left: 50px;
+  color: #fff;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+#work li:hover .whitetext {
+  top: 50px;
+  opacity: 1;
+}
+/*work 끝*/
+
+/*blog 시작*/
+#blog {
+  display: flex;
+}
+#blog h2 {
+  width: 40%;
+}
+#blog ul {
+  display: flex;
+  justify-content: space-between;
+}
+#blog ul li {
+  width: 33.333%;
+  padding-left: 15px;
+}
+#blog ul li img {
+  height: 300px;
+}
+/*contact시작*/
+#contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  align-items: center;
+}
+#contact h2 {
+  padding-right: 150px;
+}
+#contact .left form {
+  display: flex;
+  flex-direction: column;
+}
+#contact .left form input {
+  height: 35px;
+  width: 500px;
+  border-bottom: 1px solid lightgray;
+  border-style: none;
+  padding: 20px 0;
+  outline: 0;
+}
+#contact .right {
+  display: flex;
+  flex-direction: column;
+}
+#contact .right textarea {
+  width: 350px;
+  border-style: none;
+  outline: 0;
+  border-bottom: 1px solid lightgray;
+}
+#contact .right button {
+  width: 110px;
+  height: 45px;
+  background-color: rgb(80, 80, 228);
+  color: #fff;
+  border-style: none;
+  margin-left: 250px;
+  outline: 0;
+}
+footer {
+  text-align: center;
+}
+footer h1 {
+  font-size: 15px;
+  font-weight: normal;
+  padding-bottom: 30px;
+}
+
+/* 반응형 시작*/
+/* 1024px 이하 */
+@media screen and (max-width: 1024px) {
+  .text {
+    text-align: center;
+  }
+  #weare .text {
+    flex-direction: column;
+  }
+  #weare .text h2 {
+    width: 100%;
+  }
+  #weare .text p {
+    width: 100%;
+  }
+  #menu ul {
+    flex-wrap: wrap;
+  }
+  #menu ul li {
+    width: 50%;
+    padding: 20px 0;
+  }
+  .small h2 {
+    text-align: center;
+  }
+  #work ul {
+    flex-wrap: wrap;
+  }
+  #work ul li {
+    width: 50%;
+  }
+  #blog {
+    flex-wrap: wrap;
+  }
+  #blog h2 {
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+  }
+  #blog ul li img {
+    width: 100%;
+  }
+  #contact {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #contact h2 {
+    width: 100%;
+  }
+}
+/*1024이하 끝*/
+/*768이하 시작*/
+@media screen and (max-width: 768px) {
+  header ul {
+    display: none;
+  }
+  #mobile {
+    width: 45px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #mobile span {
+    background-color: #3f51b5;
+    height: 4px;
+    margin: 3px 0;
+    margin-right: 10px;
+  }
+  #weare ul li,
+  #work ul li {
+    width: 100%;
+  }
+  #blog ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #blog ul li {
+    width: 100%;
+  }
+  #contact {
+    width: 100%;
+  }
+  #contact h2 {
+    text-align: center;
+    justify-content: flex-start;
+  }
+}
